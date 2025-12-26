@@ -20,7 +20,7 @@ participoEn(Artista, Grupo) :- artista(Artista), artista(Grupo), parteDe(Artista
 filtrarAlbumesPorAnio(X, Y, Lista) :- findall(Album, (album(Album, Z, _), Z > X, Z < Y), Lista), !. %este es un filtro para un rango de años
 
 %reglas para los me gusta
-generosEscuchados(Lista) :- findall(Genero, 
+generosEscuchados(Lista) :- findall(Genero,     
 (meGusta(X), 
     (
         (artista(X), genero(X, Genero)); 
