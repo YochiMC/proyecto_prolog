@@ -14,8 +14,8 @@ cancionesDe(X, Lista):- findall(Cancion, cancion(Cancion, X, _), Lista), !.
 %banda o grupo en el que ha participado un artista
 participoEn(X, Y) :- parteDe(X, Y), banda_grupo(Y).
 
-
-
+%esto verifica que sea artista pero que no pertenezca a nignuna banda 
+esSolista(X) :-artista(X), \+ parteDe(X, _).
 
 
 

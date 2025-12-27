@@ -10,18 +10,19 @@ artista(rodrigo_guardiola).
 banda_grupo(muse).
 banda_grupo(nirvana).
 banda_grupo(foo_fighters).
-banda_grupo(zoe).
+banda_grupo(Zoe).
+banda_grupo(enjambre).
 
 album(showbiz, 1999, muse).
 album(origin_of_simmetry, 2001, muse).
 album(absolution, 2003, muse).
 
-album(zoe, 2001, zoe).
-album(Rocanlover, 2003, zoe).
-album(memo_rex_commander_y_el_corazon_atomico_de_la_via_lactea, 2006, zoe).
-album(programaton, 2013, zoe).
-album(aztlan, 2018, zoe).
-album(sonidos_de_karmatica_resonancia, 2021, zoe).
+album(Zoe, 2001, Zoe).
+album(Rocanlover, 2003, Zoe).
+album(memo_rex_commander_y_el_corazon_atomico_de_la_via_lactea, 2006, Zoe).
+album(programaton, 2013, Zoe).
+album(aztlan, 2018, Zoe).
+album(sonidos_de_karmatica_resonancia, 2021, Zoe).
 
 album(why_you, 2008, siddhartha).
 album(naufrago, 2011, siddhartha).
@@ -60,82 +61,84 @@ cancion(about_a_girl, bleach, nirvana).
 cancion(smells_like_teen_spirit, nevermind, nirvana).
 cancion(heart_shaped_box, in_utero, nirvana).
 
-cancion(asteroide, zoe, zoe).
-cancion(deja_te_conecto, zoe, zoe).
-cancion(miel, zoe, zoe).
-cancion(electricidad, zoe, zoe).
-cancion(razor_blade, zoe, zoe).
-cancion(beat_breaker, zoe, zoe).
-cancion(universo, zoe, zoe).
-cancion(conspirador, zoe, zoe).
-cancion(microscopio, zoe, zoe).
-cancion(infinito, zoe, zoe).
-cancion(random_time, zoe, zoe).
-cancion(tarantula, zoe, zoe).
-cancion(haze_girl, zoe, zoe).
+cancion(Asteroide, Zoe, Zoe).
+cancion(Deja Te Conecto, Zoe, Zoe).
+cancion(Miel, Zoe, Zoe).
+cancion(Electricidad, Zoe, Zoe).
+cancion(Razor Blade, Zoe, Zoe).
+cancion(Beat Breaker, Zoe, Zoe).
+cancion(Universo, Zoe, Zoe).
+cancion(Conspirador, Zoe, Zoe).
+cancion(Microscopio, Zoe, Zoe).
+cancion(Infinito, Zoe, Zoe).
+cancion(Random Time, Zoe, Zoe).
+cancion(Tarántula, Zoe, Zoe).
+cancion(Haze Girl, Zoe, Zoe).
 
-cancion(peace_and_love, rocanlover, zoe).
-cancion(love, rocanlover, zoe).
-cancion(solo, rocanlover, zoe).
-cancion(tu, rocanlover, zoe).
-cancion(fotosintesis, rocanlover, zoe).
-cancion(veneno, rocanlover, zoe).
-cancion(frio, rocanlover, zoe).
-cancion(polar, rocanlover, zoe).
-cancion(rocanroler, rocanlover, zoe).
-cancion(whatever, rocanlover, zoe).
-cancion(mars_200, rocanlover, zoe).
-cancion(sonye, rocanlover, zoe).
+cancion(Peace & Love, Rocanlover, Zoe).
+cancion(Love, Rocanlover, Zoe).
+cancion(Solo, Rocanlover, Zoe).
+cancion(Tú, Rocanlover, Zoe).
+cancion(Fotosíntesis, Rocanlover, Zoe).
+cancion(Veneno, Rocanlover, Zoe).
+cancion(Frío, Rocanlover, Zoe).
+cancion(Polar, Rocanlover, Zoe).
+cancion(Rocanroler, Rocanlover, Zoe).
+cancion(Whatever, Rocanlover, Zoe).
+cancion(Mars 200, Rocanlover, Zoe).
+cancion(Soñé, Rocanlover,
 
-cancion(memo_rex, memo_rex_comander_y_el_corazon_atomico_de_la_via_lactea, zoe).
-cancion(via_lactea, memo_rex_comander_y_el_corazon_atomico_de_la_via_lactea, zoe).
-cancion(vinyl, memo_rex_comander_y_el_corazon_atomico_de_la_via_lactea, zoe).
-cancion(no_me_destruyas, memo_rex_comander_y_el_corazon_atomico_de_la_via_lactea, zoe).
-cancion(corazon_atomico, memo_rex_comander_y_el_corazon_atomico_de_la_via_lactea, zoe).
-cancion(mrs_nitro, memo_rex_comander_y_el_corazon_atomico_de_la_via_lactea, zoe).
-cancion(nunca, memo_rex_comander_y_el_corazon_atomico_de_la_via_lactea, zoe).
-cancion(the_room, memo_rex_comander_y_el_corazon_atomico_de_la_via_lactea, zoe).
-cancion(paula, memo_rex_comander_y_el_corazon_atomico_de_la_via_lactea, zoe).
-cancion(human_space_volt, memo_rex_comander_y_el_corazon_atomico_de_la_via_lactea, zoe).
-cancion(triste_sister, memo_rex_comander_y_el_corazon_atomico_de_la_via_lactea, zoe).
-cancion(side_effects, memo_rex_comander_y_el_corazon_atomico_de_la_via_lactea, zoe).
-cancion(paz, memo_rex_comander_y_el_corazon_atomico_de_la_via_lactea, zoe).
 
-cancion(10_am, programaton, zoe).
-cancion(camara_lenta, programaton, zoe).
-cancion(dos_mil_trece, programaton, zoe).
-cancion(fin_de_semana, programaton, zoe).
-cancion(arrullo_de_estrellas, programaton, zoe).
-cancion(ciudades_invisibles, programaton, zoe).
-cancion(panoramas, programaton, zoe).
-cancion(game_over_shanghai, liu_yang_river, programaton, zoe).
-cancion(andromeda, programaton, zoe).
-cancion(sedantes, programaton, zoe).
-cancion(altamar, programaton, zoe).
+cancion(Memo Rex, memo_rex_comander_y_el_corazon_atomico_de_la_via_lactea, Zoe).
+cancion(Vía Láctea, memo_rex_comander_y_el_corazon_atomico_de_la_via_lactea, Zoe).
+cancion(Vinyl, memo_rex_comander_y_el_corazon_atomico_de_la_via_lactea, Zoe).
+cancion(No Me Destruyas, memo_rex_comander_y_el_corazon_atomico_de_la_via_lactea, Zoe).
+cancion(Corazón Atómico, memo_rex_comander_y_el_corazon_atomico_de_la_via_lactea, Zoe).
+cancion(Mrs. Nitro, memo_rex_comander_y_el_corazon_atomico_de_la_via_lactea, Zoe).
+cancion(Nunca, memo_rex_comander_y_el_corazon_atomico_de_la_via_lactea, Zoe).
+cancion(The Room, memo_rex_comander_y_el_corazon_atomico_de_la_via_lactea, Zoe).
+cancion(Paula, memo_rex_comander_y_el_corazon_atomico_de_la_via_lactea, Zoe).
+cancion(Human Space Volt, memo_rex_comander_y_el_corazon_atomico_de_la_via_lactea, Zoe).
+cancion(Triste Sister, memo_rex_comander_y_el_corazon_atomico_de_la_via_lactea, Zoe).
+cancion(Side Effects, memo_rex_comander_y_el_corazon_atomico_de_la_via_lactea, Zoe).
+cancion(Paz, memo_rex_comander_y_el_corazon_atomico_de_la_via_lactea, Zoe).
 
-cancion(venus, aztlan, zoe).
-cancion(azul, aztlan, zoe).
-cancion(no_hay_mal_que_dure, aztlan, zoe).
-cancion(al_final, aztlan, zoe).
-cancion(hielo, aztlan, zoe).
-cancion(luci, aztlan, zoe).
-cancion(aztlan, aztlan, zoe).
-cancion(temor_y_temblor, aztlan, zoe).
-cancion(renacer, aztlan, zoe).
-cancion(ella_es_magia, aztlan, zoe).
-cancion(oropel, aztlan, zoe).
-cancion(clarividad, aztlan, zoe).
+cancion(10 A.M., programaton, Zoe).
+cancion(Cámara Lenta, programaton, Zoe).
+cancion(Dos Mil Trece, programaton, Zoe).
+cancion(Fin de Semana, programaton, Zoe).
+cancion(Arrullo de Estrellas, programaton, Zoe).
+cancion(Ciudades Invisibles, programaton, Zoe).
+cancion(Panoramas, programaton, Zoe).
+cancion(Game Over Shanghai, Liu Yang River, programaton, Zoe).
+cancion(Andrómeda, programaton, Zoe).
+cancion(Sedantes, programaton, Zoe).
+cancion(Altamar, programaton, Zoe).
 
-cancion(popular, sonidos_de_karmatica_resonancia, zoe).
-cancion(karmadame, sonidos_de_karmatica_resonancia, zoe).
-cancion(velur, sonidos_de_karmatica_resonancia, zoe).
-cancion(el_duelo, sonidos_de_karmatica_resonancia, zoe).
-cancion(skr, sonidos_de_karmatica_resonancia, zoe).
-cancion(cancion_de_cuna_para_marte, sonidos_de_karmatica_resonancia, zoe).
-cancion(tepoztlan, sonidos_de_karmatica_resonancia, zoe).
-cancion(fiebre, sonidos_de_karmatica_resonancia, zoe).
-cancion(ese_cuadro_no_me_pinta, sonidos_de_karmatica_resonancia, zoe).
-cancion(bestiario, sonidos_de_karmatica_resonancia, zoe).
+
+cancion(Venus, aztlan, Zoe).
+cancion(Azul, aztlan, Zoe).
+cancion(No hay mal que dure, aztlan, Zoe).
+cancion(Al final, aztlan, Zoe).
+cancion(Hielo, aztlan, Zoe).
+cancion(Luci, aztlan, Zoe).
+cancion(Aztlán, aztlan, Zoe).
+cancion(Temor y temblor, aztlan, Zoe).
+cancion(Renacer, aztlan, Zoe).
+cancion(Ella es magia, aztlan, Zoe).
+cancion(Oropel, aztlan, Zoe).
+cancion(Clarividad, aztlan, Zoe).
+
+cancion(Popular, sonidos_de_karmatica_resonancia, Zoe).
+cancion(Karmadame, sonidos_de_karmatica_resonancia, Zoe).
+cancion(Velur, sonidos_de_karmatica_resonancia, Zoe).
+cancion(El Duelo, sonidos_de_karmatica_resonancia, Zoe).
+cancion(SKR, sonidos_de_karmatica_resonancia, Zoe).
+cancion(Canción de Cuna para Marte, sonidos_de_karmatica_resonancia, Zoe).
+cancion(Tepoztlán, sonidos_de_karmatica_resonancia, Zoe).
+cancion(Fiebre, sonidos_de_karmatica_resonancia, Zoe).
+cancion(Ese Cuadro No Me Pinta, sonidos_de_karmatica_resonancia, Zoe).
+cancion(Bestiario, sonidos_de_karmatica_resonancia, Zoe).
 
 cancion(volver_a_ver, why_you, siddhartha).
 cancion(sacudeme, why_you, siddhartha).
@@ -150,7 +153,7 @@ cancion(los_felices, why_you, siddhartha).
 cancion(fin, why_you, siddhartha).
 
 cancion(la_verdad, naufrago, siddhartha).
-cancion(extraÃ±os, naufrago, siddhartha).
+cancion(extraños, naufrago, siddhartha).
 cancion(domingo, naufrago, siddhartha).
 cancion(la_historia, naufrago, siddhartha).
 cancion(naufrago, naufrago, siddhartha).
@@ -164,7 +167,7 @@ cancion(mi_castillo_de_blanca_arena, naufrago, siddhartha).
 cancion(el_aire, el_vuelo_del_pez, siddhartha).
 cancion(infinitos, el_vuelo_del_pez, siddhartha).
 cancion(bacalar, el_vuelo_del_pez, siddhartha).
-cancion(una_senal, el_vuelo_del_pez, siddhartha).
+cancion(una_señal, el_vuelo_del_pez, siddhartha).
 cancion(el_deshielo, el_vuelo_del_pez, siddhartha).
 cancion(ecos_de_miel, el_vuelo_del_pez, siddhartha).
 cancion(al_anochecer, el_vuelo_del_pez, siddhartha).
