@@ -27,15 +27,38 @@ cancionesPorDecada(Decada, ListaCanciones) :-
             cancion(Cancion, Album))
         , ListaCanciones), !.
 
+%reglas para los me gusta
+generosEscuchados(Lista) :- setof(Genero, X^Albumes^Album^AlbumCancion^     
+(meGusta(X), 
+    (
+        (artista(X), albumesDe(X, Albumes), member(Album, Albumes), genero(Album, Genero));  
+        (album(X, _, _), genero(X, Genero)); 
+        (cancion(X, AlbumCancion), album(AlbumCancion, _, _), genero(AlbumCancion, Genero))
+    )
+), 
+Lista), !.
+
+% Reglas para los me gusta (CORREGIDA)
+generosEscuchados(Lista) :- 
+    findall(Genero,      
+        (
+            meGusta(X), 
+            (
+                % CASO 1: Si X es Artista -> Busca sus álbumes -> Luego el género del álbum
+                (artista(X), album(Album, _, X), genero(Album, Genero));  
+                
+                % CASO 2: Si X es Álbum -> Saca el género directo
+                (album(X, _, _), genero(X, Genero)); 
+                
+                % CASO 3: Si X es Canción -> Busca su álbum -> Luego el género del álbum
+                (cancion(X, Album), genero(Album, Genero))
+            )
+        ), 
+        ListaBruta
+    ), 
+    sort(ListaBruta, Lista). % sort elimina duplicados y ordena la lista final
 
 
-
-generosNuevo(X, Generos) :- 
-meGusta(X), 
-    (artista(X), albumesDe(X, L), member(Album, L), findall(Genero, (album(Album, _, X), genero(Album, Genero)), Generos));
-    (album(X, _, _), findall(Genero, genero(X, Genero), Generos));
-    cancion(_, _)
-, !.
 
 
 
