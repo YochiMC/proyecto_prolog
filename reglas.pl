@@ -28,16 +28,14 @@ cancionesPorDecada(Decada, ListaCanciones) :-
         , ListaCanciones), !.
 
 
-%reglas para los me gusta
-generosEscuchados(Lista) :- findall(Genero,     
-(meGusta(X), 
-    (
-        (artista(X), genero(X, Genero));  
-        (album(X, _, _), genero(X, Genero)); 
-        (cancion(X, _), genero(X, Genero))
-    )
-), 
-Lista), !.
+
+
+generosNuevo(X, Generos) :- 
+meGusta(X), 
+    (artista(X), albumesDe(X, L), member(Album, L), findall(Genero, (album(Album, _, X), genero(Album, Genero)), Generos));
+    (album(X, _, _), findall(Genero, genero(X, Genero), Generos));
+    cancion(_, _)
+, !.
 
 
 
