@@ -1,3 +1,5 @@
+use_module(library(random)).
+
 %archivo de reglas de prolog
 %--por favor intentar describir cada una de las reglas
 
@@ -58,25 +60,27 @@ generosEscuchados(Lista) :-
     ), 
     sort(ListaBruta, Lista). % sort elimina duplicados y ordena la lista final
 
+%Recomendar album en base a los generos
+albumesRecomendados(Lista) :- generosEscuchados(Generos), 
+    findall(
+        Album, 
+        (
+            member(Genero, Generos), 
+            genero(Album, Genero)
+        ), 
+        ListaBruta
+    ), sort(ListaBruta, Lista), !.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+%aleatorios para recomendaciones
+cancionesAleatoriasAlbum(Album, Lista) :- cancionesDelAlbum(Album, ListaCanciones), random_permutation(ListaCanciones, Lista), !.
+cancionesAleatoriasArtista(Artista, Lista) :- cancionesDelArtista(Artista, ListaCanciones), random_permutation(ListaCanciones, Lista), !.
+juntarCanciones(Lista) :- albumesRecomendados(Albumes),  %Esta funcion agarra canciones de los albumes que tienen alguna relacion con los generos que le gustan al usuario
+    findall(
+        Cancion, 
+        (
+            member(Album, Albumes), 
+            cancionesDelAlbum(Album, Canciones), 
+            member(Cancion, Canciones)
+        ),
+        ListaBruta
+    ), sort(ListaBruta, ListaCasiLista), random_permutation(ListaCasiLista, Lista),!.

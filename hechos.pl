@@ -1,7 +1,10 @@
 %artistas solistas
 artista(jose_jose).
+
 artista(matthew_bellamy).
+
 artista(dave_grohl).
+
 artista(thom_yorke).
 artista(jonny_greenwood).
 artista(phil_selway).
@@ -28,9 +31,12 @@ parteDe(jonny_greenwood, radiohead).
 parteDe(jonny_greenwood, the_smile).
 
 %decadas solamente como hecho
+decada(sesentas, 1960, 19690).
+decada(setentas, 1970, 1979).
 decada(ochentas, 1980, 1989).
 decada(noventas, 1990, 1999).
 decada(dosmilera, 2000, 2009).
+decada(dosmildiez, 2010, 2019).
 
 %albumes de muse
 album(showbiz, 1999, muse).
