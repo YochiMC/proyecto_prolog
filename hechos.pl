@@ -30,6 +30,9 @@ artista(the_smile).
 artista(zoe).
 artista(keane).
 artista(the_smashing_pumpkins).
+artista(linkin_park).
+artista(imagine_dragons).
+
 
 %relaciones entre artistas
 parteDe(matthew_bellamy, muse).
@@ -55,6 +58,15 @@ parteDe(sergio_acosta, zoe).
 parteDe(angel_mosqueda, zoe).
 parteDe(rodrigo_guardiola, zoe).
 
+parteDe(emily_armstrong, linkin_park).
+parteDe(colin_brittain, linkin_park).
+parteDe(dave_farrell, linkin_park).
+parteDe(mike_shinoda, linkin_park).
+
+parteDe(dan_reynolds).
+parteDe(wayne_sermon).
+parteDe(ben_mckee).
+
 %decadas solamente como hecho
 decada(sesentas, 1960, 19690).
 decada(setentas, 1970, 1979).
@@ -63,6 +75,10 @@ decada(noventas, 1990, 1999).
 decada(dosmilera, 2000, 2009).
 decada(dosmildiez, 2010, 2019).
 
+% album linkin park
+album(from_zero, 2024, linkin_park).
+% album imagine dragons 
+album(loom, 2024, imagine_dragons).
 %albumes de muse
 album(showbiz, 1999, muse).
 album(origin_of_simmetry, 2001, muse).
@@ -199,7 +215,19 @@ genero(la_nave_del_olvido, balada_romantica).
 genero(el_triste, pop_latino).
 genero(el_triste, balada_romantica).
 
+genero(from_zero, alternative_metal).
+genero(from_zero, electronic_rock).
+genero(from_zero, nu_metal).
+genero(from_zero, nu_metal).
+
+genero(loom, pop_rock).
+
 %tracklist de los albumes
+cancion(heavy_is_the_crown, from_zero).
+cancion(the_emptiness_machine, from_zero).
+
+cancion(take_me_to_the_beach, imagine_dragons).
+cancion(nice_to_meet_you, imagine_dragons).
 cancion(sunburn, showbiz).
 cancion(muscle_museum, showbiz).
 cancion(fillip, showbiz).
@@ -611,3 +639,4 @@ meGusta(absolution).
 meGusta(nevermind).
 meGusta(time_is_running_out). 
 meGusta(idioteque).
+meGusta(linkin_park).
