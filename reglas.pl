@@ -190,13 +190,6 @@ guardarHechos :-
     told.
 
 agregarMeGusta(X) :-
-	artista(X),
-    \+ meGusta(X),
-    assertz(meGusta(X));
-	cancion(X),
-    \+ meGusta(X),
-    assertz(meGusta(X));
-	album(X),
     \+ meGusta(X),
     assertz(meGusta(X)).
 
