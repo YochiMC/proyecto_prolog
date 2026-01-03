@@ -1,5 +1,8 @@
 use_module(library(random)).
 :- dynamic meGusta/1.
+:- dynamic cancion/2.
+:- dynamic artista/1.
+:- dynamic album/3.
 
 
 %archivo de reglas de prolog
@@ -191,6 +194,13 @@ guardarHechos :-
     told.
 
 agregarMeGusta(X) :-
+	artista(X),
+    \+ meGusta(X),
+    assertz(meGusta(X));
+	cancion(X),
+    \+ meGusta(X),
+    assertz(meGusta(X));
+	album(X),
     \+ meGusta(X),
     assertz(meGusta(X)).
 
