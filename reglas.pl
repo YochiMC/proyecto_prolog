@@ -1,4 +1,6 @@
 use_module(library(random)).
+:- dynamic meGusta/1.
+
 
 %archivo de reglas de prolog
 %--por favor intentar describir cada una de las reglas
