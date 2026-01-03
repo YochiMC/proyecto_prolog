@@ -194,9 +194,18 @@ agregarMeGusta(X) :-
     \+ meGusta(X),
     assertz(meGusta(X)).
 
+% X solo es vlaido si existe como artista, album o cancion
+existeHecho(X) :-
+    artista(X)
+    ;    
+    album(X, _, _)
+    ;
+    cancion(X, _).
+
 %reglita para añadir elementos con asserts pero aqui solo lo almacena en memoria, no lo guarda aun.
 %recibimos el parametro del nuevo elemento  (chida pa ejecutar)
 like(X) :-
+	existeHecho(X),
     agregarMeGusta(X),
     guardarHechos.
 
@@ -212,4 +221,5 @@ dislike(X) :-
     eliminarMeGusta(X),
     guardarHechos.
 
+%pd, la chida para ejecutar es like y dislike, like ya valida si existe o uno en los hechos
 %---------------------------Fin Me Gusta ----------------------------
