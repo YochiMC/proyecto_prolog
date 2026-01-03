@@ -527,7 +527,7 @@ cancion(triste_sister, memo_rex_comander_y_el_corazon_atomico_de_la_via_lactea).
 cancion(side_effects, memo_rex_comander_y_el_corazon_atomico_de_la_via_lactea).
 cancion(paz, memo_rex_comander_y_el_corazon_atomico_de_la_via_lactea).
 %---------
-cancion('10_am', programaton).
+cancion(diez_am, programaton). %10 am
 cancion(camara_lenta, programaton).
 cancion(dos_mil_trece, programaton).
 cancion(fin_de_semana, programaton).

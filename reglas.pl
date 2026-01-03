@@ -108,8 +108,8 @@ generosEscuchados(Lista) :-
 		Lista).
 
 % Genero principal del artista
-% Elementos más frecuentes de una lista (Generos en los albumes del artista)
-% Alonso Jiménez, J. A. (s/f). Ejercicios de programación declarativa con Prolog. Facialix.com. Recuperado el 28 de diciembre de 2025, de https://facialix.com/wp-content/uploads/2022/01/ej_prog_Prolog.pdf
+% Elementos 'más frecuentes de una lista (Generos en los albumes del artista)'
+% Alonso Jiménez, J. A. '(s/f). Ejercicios de programación declarativa con Prolog. Facialix.com. Recuperado el 28 de diciembre de 2025, de https://facialix.com/wp-content/uploads/2022/01/ej_prog_Prolog.pdf'
 populares(L1, L2) :-
 	setof(X,
 		((member(X, L1),
