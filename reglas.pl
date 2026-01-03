@@ -1,9 +1,5 @@
 use_module(library(random)).
 :- dynamic meGusta/1.
-:- dynamic cancion/2.
-:- dynamic artista/1.
-:- dynamic album/3.
-
 
 %archivo de reglas de prolog
 %--por favor intentar describir cada una de las reglas
