@@ -6,10 +6,11 @@ use_module(library(random)).
 
 %aquí tenemos estas listas por años y artistas
 albumesDe(Artista, Lista) :-
+	artista(Artista),
 	findall(Album,
 		album(Album, _, Artista),
-		Lista),
-	!.
+		Lista).
+
 albumesDel(Anio, Lista) :-
 	findall(Album,
 		album(Album, Anio, _),
@@ -69,23 +70,7 @@ cancionesPorDecada(Decada, ListaCanciones) :-
 		ListaCanciones),
 	!.
 
-%reglas para los me gusta
-generosEscuchados(Lista) :-
-	setof(Genero,
-		X^Albumes^Album^AlbumCancion^(meGusta(X),
-			((artista(X),
-					albumesDe(X, Albumes),
-					member(Album, Albumes),
-					genero(Album, Genero));
-(album(X, _, _),
-					genero(X, Genero));
-(cancion(X, AlbumCancion),
-					album(AlbumCancion, _, _),
-					genero(AlbumCancion, Genero)))),
-		Lista),
-	!.
-
-% Reglas para los me gusta (CORREGIDA)
+% Generos que escucha en base a los me gusta
 generosEscuchados(Lista) :-
 	findall(Genero,
 		(meGusta(X),
@@ -93,15 +78,16 @@ generosEscuchados(Lista) :-
 			(artista(X),
 					album(Album, _, X),
 					genero(Album, Genero));
-% CASO 2: Si X es Álbum -> Saca el género directo
-(album(X, _, _),
+			% CASO 2: Si X es Álbum -> Saca el género directo
+			(album(X, _, _),
 					genero(X, Genero));
-% CASO 3: Si X es Canción -> Busca su álbum -> Luego el género del álbum
-(cancion(X, Album),
+			% CASO 3: Si X es Canción -> Busca su álbum -> Luego el género del álbum
+			(cancion(X, Album),
 					genero(Album, Genero)))),
 		ListaBruta),
 	sort(ListaBruta, Lista).% sort elimina duplicados y ordena la lista final
-	% Generos de los albums de un artista
+	
+% Generos de los albums de un artista
 	generosAlbumArtista(Artista, Lista)  :- artista(Artista),
 	findall(Genero,
 		(album(Album, _, Artista),
@@ -190,35 +176,33 @@ guardarHechos :-
     told.
 
 agregarMeGusta(X) :-
-    \+ meGusta(X),
-    assertz(meGusta(X)).
+	 \+ meGusta(X),
+	assertz(meGusta(X)).
 
 % X solo es vlaido si existe como artista, album o cancion
 existeHecho(X) :-
-    artista(X)
-    ;    
-    album(X, _, _)
-    ;
-    cancion(X, _).
+	artista(X);
+album(X, _, _);
+cancion(X, _).
 
 %reglita para añadir elementos con asserts pero aqui solo lo almacena en memoria, no lo guarda aun.
 %recibimos el parametro del nuevo elemento  (chida pa ejecutar)
 like(X) :-
 	existeHecho(X),
-    agregarMeGusta(X),
-    guardarHechos.
+	agregarMeGusta(X),
+	guardarHechos.
 
 
 %boorarr un meGusta de la base de memoria somalente
 eliminarMeGusta(X) :-
-    meGusta(X),
-    retract(meGusta(X)).
+	meGusta(X),
+	retract(meGusta(X)).
 
 
 % elimina un meGusta y actualiza el archivo de hechos.pl (chida pa ejecutar)
 dislike(X) :-
-    eliminarMeGusta(X),
-    guardarHechos.
+	eliminarMeGusta(X),
+	guardarHechos.
 
 %pd, la chida para ejecutar es like y dislike, like ya valida si existe o uno en los hechos
 %---------------------------Fin Me Gusta ----------------------------

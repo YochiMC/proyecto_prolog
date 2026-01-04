@@ -185,7 +185,7 @@ genero(in_utero, punk_rock).
 genero(in_utero, noise_rock).
 
 genero(the_bends, alternative_rock).
-genero(the_bends, post-britpop).
+genero(the_bends, post_britpop).
 %------------
 genero(ok_computer, alternative_rock).
 genero(ok_computer, art_rock).
@@ -194,12 +194,12 @@ genero(kid_a, art_rock).
 genero(kid_a, electronica).
 genero(kid_a, experimental_rock).
 
-genero(the_colour_and_the_shape, post-grunge).
+genero(the_colour_and_the_shape, post_grunge).
 genero(the_colour_and_the_shape, alternative_rock).
 
 genero(a_light_for_attracting_attention, art_rock).
 genero(a_light_for_attracting_attention, electronica).
-genero(a_light_for_attracting_attention, post-punk).
+genero(a_light_for_attracting_attention, post_punk).
 genero(a_light_for_attracting_attention, progressive_rock).
 
 genero(hopes_and_fears, alternative_rock).
