@@ -1,11 +1,15 @@
 %artistas solistas
 artista(jose_jose).
 
+artista(post_malone). 
+
 artista(matthew_bellamy).
 
 artista(dave_grohl).
 
 artista(siddhartha).
+
+artista(chris_martin).
 
 artista(leon_larregui).
 artista(sergio_acosta).
@@ -32,7 +36,7 @@ artista(keane).
 artista(the_smashing_pumpkins).
 artista(linkin_park).
 artista(imagine_dragons).
-
+artista(coldplay).
 
 %relaciones entre artistas
 parteDe(matthew_bellamy, muse).
@@ -63,9 +67,11 @@ parteDe(colin_brittain, linkin_park).
 parteDe(dave_farrell, linkin_park).
 parteDe(mike_shinoda, linkin_park).
 
-parteDe(dan_reynolds).
-parteDe(wayne_sermon).
-parteDe(ben_mckee).
+parteDe(dan_reynolds, imagine_dragons).
+parteDe(wayne_sermon, imagine_dragons).
+parteDe(ben_mckee, imagine_dragons).
+
+parteDe(chris_martin, coldplay).
 
 %decadas solamente como hecho
 decada(sesentas, 1960, 19690).
@@ -74,12 +80,18 @@ decada(ochentas, 1980, 1989).
 decada(noventas, 1990, 1999).
 decada(dosmilera, 2000, 2009).
 decada(dosmildiez, 2010, 2019).
+decada(dosmilveinte, 2020, 2029).
 
 % album linkin park
-album(from_zero, 2024, linkin_park).
 album(hybrid_theory, 2000, linkin_park).
+album(meteora, 2003, linkin_park).
+album(from_zero, 2024, linkin_park).
+
 % album imagine dragons 
+album(night_visions, 2012, imagine_dragons).
+album(mercury_acts_1_and_2, 2022, imagine_dragons).
 album(loom, 2024, imagine_dragons).
+
 %albumes de muse
 album(showbiz, 1999, muse).
 album(origin_of_simmetry, 2001, muse).
@@ -129,6 +141,11 @@ album(under_the_iron_sea, 2006, keane).
 %albumes de the the smashing pumpkins
 album(siamese_dream, 1993, the_smashing_pumpkins).
 album(mellon_collie_and_the_infinite_sadness, 1995, the_smashing_pumpkins).
+
+%albumes de coldplay
+album(parachutes, 2000, coldplay).
+album(a_rush_of_blood_to_the_head, 2002, coldplay).
+album(x_and_y, 2005, coldplay).
 
 %aqui van etiquetas
 tag(navidenas, showbiz).
@@ -206,6 +223,16 @@ genero(mellon_collie_and_the_infinite_sadness, alternative_metal).
 genero(mellon_collie_and_the_infinite_sadness, art_rock).
 genero(mellon_collie_and_the_infinite_sadness, heavy_metal).
 
+genero(parachutes, rock_alternativo).
+genero(parachutes, post_britpop).
+%------------
+genero(a_rush_of_blood_to_the_head, alternative_rock).
+genero(a_rush_of_blood_to_the_head, pop_rock).
+%------------
+genero(x_and_y, alternative_rock).
+genero(x_and_y, space_rock).
+genero(x_and_y, ambient).
+
 genero(cuidado, bossanova).
 genero(cuidado, jazz).
 genero(cuidado, balada_romantica).
@@ -216,19 +243,127 @@ genero(la_nave_del_olvido, balada_romantica).
 genero(el_triste, pop_latino).
 genero(el_triste, balada_romantica).
 
-genero(from_zero, alternative_metal).
-genero(from_zero, electronic_rock).
+genero(meteora, nu_metal).
+genero(meteora, rap_metal).
+genero(meteora, alternative_rock).
+%-------------
+genero(hybrid_theory, nu_metal).
+genero(hybrid_theory, rap_metal).
+genero(hybrid_theory, alternative_rock).
+%-------------
 genero(from_zero, nu_metal).
-genero(hybrid_theory,nu_metal).
+genero(from_zero, alternative_rock).
+genero(from_zero, alternative_metal).
+genero(from_zero, pop_rock).
+genero(from_zero, rap_rock).
+genero(from_zero, electronic_rock).
+
 genero(loom, pop_rock).
+genero(loom, alternative_rock).
+%-------------
+genero(mercury_acts_1_and_2, pop_rock).
+genero(mercury_acts_1_and_2, synth_pop).
+genero(mercury_acts_1_and_2, r_and_b).
+%-------------
+genero(night_visions, pop_rock).
+genero(night_visions, alternative_rock).
+genero(night_visions, electronic_rock).
 
 %tracklist de los albumes
-cancion(heavy_is_the_crown, from_zero).
+cancion(from_zero_intro, from_zero).         % "From Zero (Intro)" -> from_zero_intro
 cancion(the_emptiness_machine, from_zero).
-cancion(in_the_end,hybrid_theory).
+cancion(cut_the_bridge, from_zero).
+cancion(heavy_is_the_crown, from_zero).
+cancion(over_each_other, from_zero).
+cancion(casualty, from_zero).
+cancion(overflow, from_zero).
+cancion(two_faced, from_zero).
+cancion(stained, from_zero).
+cancion(igyeih, from_zero).                  % acrónimo de "I Give You Everything I Have"
+cancion(good_things_go, from_zero).
+%--------------
+cancion(papercut, hybrid_theory).
+cancion(one_step_closer, hybrid_theory).
+cancion(with_you, hybrid_theory).
+cancion(points_of_authority, hybrid_theory).
+cancion(crawling, hybrid_theory).
+cancion(runaway, hybrid_theory).
+cancion(by_myself, hybrid_theory).
+cancion(in_the_end, hybrid_theory).
+cancion(a_place_for_my_head, hybrid_theory).
+cancion(forgotten, hybrid_theory).
+cancion(cure_for_the_itch, hybrid_theory).
+cancion(pushing_me_away, hybrid_theory).
+%---------------
+cancion(foreword, meteora).               % "Foreword"
+cancion(dont_stay, meteora).              % "Don't Stay"
+cancion(somewhere_i_belong, meteora).
+cancion(lying_from_you, meteora).
+cancion(hit_the_floor, meteora).
+cancion(easier_to_run, meteora).
+cancion(faint, meteora).
+cancion(figure_09, meteora).              % "Figure.09" -> figure_09
+cancion(breaking_the_habit, meteora).
+cancion(from_the_inside, meteora).
+cancion(nobodys_listening, meteora).
+cancion(session, meteora).
+cancion(numb, meteora).
 
-cancion(take_me_to_the_beach, imagine_dragons).
-cancion(nice_to_meet_you, imagine_dragons).
+cancion(wake_up, loom).
+cancion(nice_to_meet_you, loom).
+cancion(eyes_closed, loom).
+cancion(take_me_to_the_beach, loom).
+cancion(in_your_corner, loom).
+cancion(gods_dont_pray, loom).
+cancion(dont_forget_me, loom).
+cancion(kid, loom).
+cancion(fire_in_these_hills, loom).
+%-------------
+cancion(enemy_with_jid, mercury_acts_1_and_2).           % "Enemy (with JID)"
+cancion(my_life, mercury_acts_1_and_2).
+cancion(lonely, mercury_acts_1_and_2).
+cancion(wrecked, mercury_acts_1_and_2).
+cancion(monday, mercury_acts_1_and_2).
+cancion(hash_1, mercury_acts_1_and_2).                   % "#1" -> hash_1
+cancion(easy_come_easy_go, mercury_acts_1_and_2).
+cancion(giants, mercury_acts_1_and_2).
+cancion(its_ok, mercury_acts_1_and_2).                    % It's Ok -> its_ok '
+cancion(dull_knives, mercury_acts_1_and_2).
+cancion(follow_you, mercury_acts_1_and_2).
+cancion(cutthroat, mercury_acts_1_and_2).
+cancion(no_time_for_toxic_people, mercury_acts_1_and_2).
+cancion(one_day, mercury_acts_1_and_2).
+cancion(bones, mercury_acts_1_and_2).
+cancion(symphony, mercury_acts_1_and_2).
+cancion(sharks, mercury_acts_1_and_2).
+cancion(i_dont_like_myself, mercury_acts_1_and_2).       % I Don't Like Myself '
+cancion(blur, mercury_acts_1_and_2).
+cancion(higher_ground, mercury_acts_1_and_2).
+cancion(crushed, mercury_acts_1_and_2).
+cancion(take_it_easy, mercury_acts_1_and_2).
+cancion(waves, mercury_acts_1_and_2).
+cancion(im_happy, mercury_acts_1_and_2).                  % I'm Happy '
+cancion(ferris_wheel, mercury_acts_1_and_2).
+cancion(peace_of_mind, mercury_acts_1_and_2).
+cancion(sirens, mercury_acts_1_and_2).
+cancion(tied, mercury_acts_1_and_2).
+cancion(younger, mercury_acts_1_and_2).
+cancion(i_wish, mercury_acts_1_and_2).                    % presente en versiones digitales
+cancion(continual_feat_cory_henry, mercury_acts_1_and_2).  % Continual (feat. Cory Henry)""
+cancion(they_dont_know_you_like_i_do, mercury_acts_1_and_2).
+%-------------------
+cancion(radioactive, night_visions).
+cancion(tiptoe, night_visions).
+cancion(its_time, night_visions).                     % "It's Time" -> its_time
+cancion(demons, night_visions).
+cancion(on_top_of_the_world, night_visions).
+cancion(amsterdam, night_visions).
+cancion(hear_me, night_visions).
+cancion(every_night, night_visions).
+cancion(bleeding_out, night_visions).
+cancion(underdog, night_visions).
+cancion(nothing_left_to_say_rocks, night_visions).    % "Nothing Left to Say / Rocks" unido
+
 cancion(sunburn, showbiz).
 cancion(muscle_museum, showbiz).
 cancion(fillip, showbiz).
@@ -379,6 +514,42 @@ cancion(waving_a_white_flag, a_light_for_attracting_attention).
 cancion(we_dont_know_what_tomorrow_brings, a_light_for_attracting_attention). %completar don't  '
 cancion(skrting_on_the_surface, a_light_for_attracting_attention).
 
+cancion(dont_panic, parachutes).
+cancion(shiver, parachutes).
+cancion(spies, parachutes).
+cancion(sparks, parachutes).
+cancion(yellow, parachutes).
+cancion(trouble, parachutes).
+cancion(parachutes, parachutes).        % canción homónima
+cancion(high_speed, parachutes).
+cancion(we_never_change, parachutes).
+cancion(everythings_not_lost, parachutes). % contiene pista oculta "life_is_for_living"
+%----------
+cancion(politik, a_rush_of_blood_to_the_head).
+cancion(in_my_place, a_rush_of_blood_to_the_head).
+cancion(god_put_a_smile_upon_your_face, a_rush_of_blood_to_the_head).
+cancion(the_scientist, a_rush_of_blood_to_the_head).
+cancion(clocks, a_rush_of_blood_to_the_head).
+cancion(daylight, a_rush_of_blood_to_the_head).
+cancion(green_eyes, a_rush_of_blood_to_the_head).
+cancion(warning_sign, a_rush_of_blood_to_the_head).
+cancion(a_whisper, a_rush_of_blood_to_the_head).
+cancion(a_rush_of_blood_to_the_head_cancion, a_rush_of_blood_to_the_head).  % canción homónima
+cancion(amsterdam, a_rush_of_blood_to_the_head).
+%------------
+cancion(square_one, x_and_y).
+cancion(what_if, x_and_y).
+cancion(white_shadows, x_and_y).
+cancion(fix_you, x_and_y).
+cancion(talk, x_and_y).
+cancion(x_and_y_cancion, x_and_y).        % "X&Y" -> x_and_y_cancion
+cancion(speed_of_sound, x_and_y).
+cancion(a_message, x_and_y).
+cancion(low, x_and_y).
+cancion(the_hardest_part, x_and_y).
+cancion(swallowed_in_the_sea, x_and_y).
+cancion(twisted_logic, x_and_y).
+cancion(til_kingdom_come, x_and_y).       % pista oculta "'Til Kingdom Come"
 
 cancion(somewhere_only_we_know, hopes_and_fears).
 cancion(bend_and_break, hopes_and_fears).
@@ -633,10 +804,3 @@ cancion(balsa, 00_00).
 cancion(suburbios, 00_00).
 cancion(no_es_antes_ni_es_despues, 00_00).
 
-%aqui van los me gusta
-meGusta(muse).
-meGusta(nirvana).
-meGusta(absolution).
-meGusta(nevermind).
-meGusta(time_is_running_out). 
-meGusta(idioteque).

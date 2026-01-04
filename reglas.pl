@@ -171,9 +171,9 @@ navidenasNoventa(Lista) :-
 %-------------------------------Me Gusta --------------------------------------
 %modificamos el archivo con la nueva informacion quee sta en memoria
 guardarHechos :-
-	tell('hechos.pl'),
-	listing(meGusta),
-	told.
+    tell('like.pl'),
+    listing(meGusta),
+    told.
 
 agregarMeGusta(X) :-
 	 \+ meGusta(X),
