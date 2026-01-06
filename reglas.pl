@@ -12,38 +12,38 @@ albumesDe(Artista, Lista) :-
 		Lista).
 
 albumesDel(Anio, Lista) :-
+	album(_, Anio, _),
 	findall(Album,
 		album(Album, Anio, _),
-		Lista),
-	!.
+		Lista).
 
 %lista de integrantes de una banda o grupo
 integrantes(Grupo, Lista) :-
+	parteDe(_, Grupo),
 	findall(Artista,
 		parteDe(Artista, Grupo),
-		Lista),
-	!.
+		Lista).
 
 %lista de canciones de dicho album o artista
 cancionesDelAlbum(Album, Lista) :-
 	album(Album, _, _),
 	findall(Cancion,
 		cancion(Cancion, Album),
-		Lista),
-	!.
+		Lista).
+
 cancionesDelArtista(Artista, Lista) :-
 	artista(Artista),
 	findall(Cancion,
 		(album(Album, _, Artista),
 			cancion(Cancion, Album)),
-		Lista),
-	!.
+		Lista).
+
 cancionesDelAnio(Anio, Lista) :-
+	album(_, Anio, _),
 	findall(Cancion,
 		(album(Album, Anio, _),
 			cancion(Cancion, Album)),
-		Lista),
-	!.
+		Lista).
 
 %banda o grupo en el que ha participado un artista
 participoEn(Artista, Grupo) :-
@@ -63,12 +63,12 @@ filtrarAlbumesPorAnio(X, Y, Lista) :-
 	filtrarAlbumesPorAnio(X, Y, L),
 	!. 
 cancionesPorDecada(Decada, ListaCanciones) :-
+	decada(Decada, _, _),
 	albumesPorDecada(Decada, ListaAlbumes),
 	findall(Cancion,
 		(member(Album, ListaAlbumes),
 			cancion(Cancion, Album)),
-		ListaCanciones),
-	!.
+		ListaCanciones).
 
 % Generos que escucha en base a los me gusta
 generosEscuchados(Lista) :-
@@ -143,12 +143,12 @@ albumesRecomendados(Lista) :-
 %aleatorios para recomendaciones
 cancionesAleatoriasAlbum(Album, Lista) :-
 	cancionesDelAlbum(Album, ListaCanciones),
-	random_permutation(ListaCanciones, Lista),
-	!.
+	random_permutation(ListaCanciones, Lista).
+	
 cancionesAleatoriasArtista(Artista, Lista) :-
 	cancionesDelArtista(Artista, ListaCanciones),
-	random_permutation(ListaCanciones, Lista),
-	!.
+	random_permutation(ListaCanciones, Lista).
+
 juntarCanciones(Lista) :-
 	albumesRecomendados(Albumes),
 	%Esta funcion agarra canciones de los albumes que tienen alguna relacion con los generos que le gustan al usuario

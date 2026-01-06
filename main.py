@@ -5,6 +5,7 @@ prolog=Prolog()
 
 prolog.consult("hechos.pl")
 prolog.consult("reglas.pl")
+prolog.consult("like.pl")
 
 def query_prolog(consulta):
     listaConsulta.delete(0, END)
@@ -43,7 +44,6 @@ Button(frame_reglas, text="Canciones de un álbum", font=('Consolas',11), comman
 Button(frame_reglas, text="Canciones del artista", font=('Consolas',11), command= lambda: query_prolog('cancionesDelArtista(Artista, Lista)')).pack(fill='x')
 Button(frame_reglas, text="Canciones del año", font=('Consolas',11), command=lambda: query_prolog('cancionesDelAnio(Anio, Lista)')).pack(fill='x')
 Button(frame_reglas, text="Grupos en los que ha participado un artista", font=('Consolas',11), wraplength=250, command = lambda: query_prolog('participoEn(Artista, Grupo)')).pack(fill='x')
-Button(frame_reglas, text="Filtrar álbumes por año", font=('Consolas',11), command= lambda: query_prolog('filtrarAlbumesPorAnio(X, Y, Lista)')).pack(fill='x')
 Button(frame_reglas, text="Canciones por decada", font=('Consolas',11), command=lambda: query_prolog('cancionesPorDecada(Decada, ListaCanciones)')).pack(fill='x')
 Button(frame_reglas, text="Generos escuchados en base a los gustos", font=('Consolas',11), wraplength=250, command=lambda: query_prolog('generosEscuchados(Lista)')).pack(fill='x')
 Button(frame_reglas, text="Generos de los álbumes de un artista", font=('Consolas',11),wraplength=250, command=lambda: query_prolog('generosAlbumArtista(Artista, Lista)')).pack(fill='x')

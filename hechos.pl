@@ -53,7 +53,7 @@ parteDe(jonny_greenwood, radiohead).
 parteDe(jonny_greenwood, the_smile).
 
 parteDe(tom_chaplin, keane).
-parteDe(tim_rice-oxley, keane).
+parteDe(tim_rice_oxley, keane).
 
 parteDe(billy_corgan, the_smashing_pumpkins).
 
@@ -74,7 +74,7 @@ parteDe(ben_mckee, imagine_dragons).
 parteDe(chris_martin, coldplay).
 
 %decadas solamente como hecho
-decada(sesentas, 1960, 19690).
+decada(sesentas, 1960, 1969).
 decada(setentas, 1970, 1979).
 decada(ochentas, 1980, 1989).
 decada(noventas, 1990, 1999).
