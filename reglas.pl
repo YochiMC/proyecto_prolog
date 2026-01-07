@@ -46,10 +46,12 @@ cancionesDelAnio(Anio, Lista) :-
 		Lista).
 
 %banda o grupo en el que ha participado un artista
-participoEn(Artista, Grupo) :-
+participoEn(Artista, Lista) :-
+	parteDe(Artista, _),
 	artista(Artista),
-	artista(Grupo),
-	parteDe(Artista, Grupo).
+	findall(Grupo, 
+		parteDe(Artista, Grupo), 
+	Lista).
 
 %filtros por año X = rango inferior Y = rango superior X = año del album
 filtrarAlbumesPorAnio(X, Y, Lista) :-

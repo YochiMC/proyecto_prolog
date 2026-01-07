@@ -223,7 +223,7 @@ genero(mellon_collie_and_the_infinite_sadness, alternative_metal).
 genero(mellon_collie_and_the_infinite_sadness, art_rock).
 genero(mellon_collie_and_the_infinite_sadness, heavy_metal).
 
-genero(parachutes, rock_alternativo).
+genero(parachutes, alternative_rock).
 genero(parachutes, post_britpop).
 %------------
 genero(a_rush_of_blood_to_the_head, alternative_rock).
